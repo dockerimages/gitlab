@@ -2,7 +2,7 @@ FROM ubuntu:xenial-20181218
 
 ARG BUILD_DATE
 ARG VCS_REF
-ARG VERSION=11.7.0
+ARG VERSION=11.7.3
 
 ENV GITLAB_VERSION=${VERSION} \
     RUBY_VERSION=2.5 \
@@ -62,15 +62,15 @@ COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod 755 /sbin/entrypoint.sh
 
 LABEL \
-    maintainer="sameer@damagehead.com" \
+    maintainer="frank@dspeed.eu" \
     org.label-schema.schema-version="1.0" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.name=gitlab \
-    org.label-schema.vendor=damagehead \
-    org.label-schema.url="https://github.com/docker-gitlab" \
-    org.label-schema.vcs-url="https://github.com/docker-gitlab.git" \
+    org.label-schema.vendor=dockerimages \
+    org.label-schema.url="https://github.com/dockerimages/gitlab" \
+    org.label-schema.vcs-url="https://github.com/dockerimages/gitlab.git" \
     org.label-schema.vcs-ref=${VCS_REF} \
-    com.damagehead.gitlab.license=MIT
+    com.dockerimages.gitlab.license=MIT
 
 EXPOSE 22/tcp 80/tcp 443/tcp
 
