@@ -1,4 +1,4 @@
-# GitLab
+# dockerimages/gitlab
 This is a dockerimage based on gitlab/gitlab-ce with some extended Functionality and a example docker-compose file how
 to run it
 
